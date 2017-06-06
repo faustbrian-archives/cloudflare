@@ -1,7 +1,7 @@
 {
     "name": "faustbrian/cloudflare-php-client",
     "description": "A CloudFlare Client for PHP",
-    "keywords": ["api", "faustbrian", "faustbrian-cloudflare", "cloudflare", "Brian Faust", "faustbrian"],
+    "keywords": ["api", "cloudflare", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
