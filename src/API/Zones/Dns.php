@@ -16,32 +16,32 @@ use BrianFaust\Http\HttpResponse;
 
 class Dns extends AbstractAPI
 {
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/dns_records", $parameters);
     }
 
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/dns_records", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/dns_records/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/dns_records/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters): HttpResponse
+    public function delete(array $parameters = []): HttpResponse
     {
         return $this->client->delete("zones/{$zoneIdentifier}/dns_records/{$identifier}", $parameters);
     }
 
-    public function import(array $parameters): HttpResponse
+    public function import(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/dns_records/import", $parameters);
     }

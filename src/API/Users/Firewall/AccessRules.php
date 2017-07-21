@@ -16,22 +16,22 @@ use BrianFaust\Http\HttpResponse;
 
 class AccessRules extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get('user/firewall/access_rules/rules', $parameters);
     }
 
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post('user/firewall/access_rules/rules', $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("user/firewall/access_rules/rules/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters): HttpResponse
+    public function delete(array $parameters = []): HttpResponse
     {
         return $this->client->delete("user/firewall/access_rules/rules/{$identifier}", $parameters);
     }

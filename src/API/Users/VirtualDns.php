@@ -16,27 +16,27 @@ use BrianFaust\Http\HttpResponse;
 
 class VirtualDns extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get('user/virtual_dns', $parameters);
     }
 
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post('user/virtual_dns', $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("user/virtual_dns/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters): HttpResponse
+    public function delete(array $parameters = []): HttpResponse
     {
         return $this->client->delete("user/virtual_dns/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("user/virtual_dns/{$identifier}", $parameters);
     }

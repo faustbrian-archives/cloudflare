@@ -16,12 +16,12 @@ use BrianFaust\Http\HttpResponse;
 
 class DnsAnalytics extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$identifier}/dns_analytics/report", $parameters);
     }
 
-    public function listByTime(array $parameters): HttpResponse
+    public function listByTime(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$identifier}/dns_analytics/report/bytime", $parameters);
     }

@@ -16,27 +16,27 @@ use BrianFaust\Http\HttpResponse;
 
 class Invites extends AbstractAPI
 {
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post("organizations/{$organizationIdentifier}/invites", $parameters);
     }
 
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$organizationIdentifier}/invites", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$organizationIdentifier}/invites/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("organizations/{$organizationIdentifier}/invites/{$identifier}", $parameters);
     }
 
-    public function cancel(array $parameters): HttpResponse
+    public function cancel(array $parameters = []): HttpResponse
     {
         return $this->client->delete("organizations/{$organizationIdentifier}/invites/{$identifier}", $parameters);
     }

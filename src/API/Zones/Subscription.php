@@ -16,17 +16,17 @@ use BrianFaust\Http\HttpResponse;
 
 class Subscription extends AbstractAPI
 {
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$identifier}/subscription", $parameters);
     }
 
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$identifier}/subscription", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$identifier}/subscription", $parameters);
     }

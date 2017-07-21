@@ -16,7 +16,7 @@ use BrianFaust\Http\HttpResponse;
 
 class RatePlan extends AbstractAPI
 {
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post('zones', $parameters);
     }

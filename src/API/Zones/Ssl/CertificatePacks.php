@@ -16,17 +16,17 @@ use BrianFaust\Http\HttpResponse;
 
 class CertificatePacks extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/ssl/certificate_packs", $parameters);
     }
 
-    public function order(array $parameters): HttpResponse
+    public function order(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/ssl/certificate_packs", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/ssl/certificate_packs/{$identifier}", $parameters);
     }

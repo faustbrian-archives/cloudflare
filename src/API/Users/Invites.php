@@ -16,17 +16,17 @@ use BrianFaust\Http\HttpResponse;
 
 class Invites extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get('user/invites', $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("user/invites/{$identifier}", $parameters);
     }
 
-    public function respond(array $parameters): HttpResponse
+    public function respond(array $parameters = []): HttpResponse
     {
         return $this->client->patch("user/invites/{$identifier}", $parameters);
     }

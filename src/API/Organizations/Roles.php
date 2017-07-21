@@ -16,12 +16,12 @@ use BrianFaust\Http\HttpResponse;
 
 class Roles extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$organizationIdentifier}/roles", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->patch("organizations/{$organizationIdentifier}/roles/{$identifier}", $parameters);
     }

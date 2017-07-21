@@ -16,27 +16,27 @@ use BrianFaust\Http\HttpResponse;
 
 class AccessRules extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/firewall/access_rules", $parameters);
     }
 
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/firewall/access_rules", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/firewall/access_rules/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/firewall/access_rules/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters): HttpResponse
+    public function delete(array $parameters = []): HttpResponse
     {
         return $this->client->delete("zones/{$zoneIdentifier}/firewall/access_rules/{$identifier}", $parameters);
     }

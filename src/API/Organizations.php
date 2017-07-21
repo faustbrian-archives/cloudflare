@@ -15,12 +15,12 @@ use BrianFaust\Http\HttpResponse;
 
 class Organizations extends AbstractAPI
 {
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("organizations/{$identifier}", $parameters);
     }

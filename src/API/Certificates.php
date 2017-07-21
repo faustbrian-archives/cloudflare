@@ -15,22 +15,22 @@ use BrianFaust\Http\HttpResponse;
 
 class Certificates extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get('certificates', $parameters);
     }
 
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post('certificates', $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("certificates/{$identifier}", $parameters);
     }
 
-    public function revoke(array $parameters): HttpResponse
+    public function revoke(array $parameters = []): HttpResponse
     {
         return $this->client->delete("certificates/{$identifier}", $parameters);
     }

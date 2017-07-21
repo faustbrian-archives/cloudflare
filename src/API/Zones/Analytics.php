@@ -16,12 +16,12 @@ use BrianFaust\Http\HttpResponse;
 
 class Analytics extends AbstractAPI
 {
-    public function dashboard(array $parameters): HttpResponse
+    public function dashboard(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/analytics/dashboard", $parameters);
     }
 
-    public function colos(array $parameters): HttpResponse
+    public function colos(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/analytics/colos", $parameters);
     }

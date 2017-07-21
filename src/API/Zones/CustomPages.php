@@ -16,17 +16,17 @@ use BrianFaust\Http\HttpResponse;
 
 class CustomPages extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/custom_pages", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/custom_pages/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/custom_pages/{$identifier}", $parameters);
     }

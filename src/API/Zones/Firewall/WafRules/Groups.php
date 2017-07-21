@@ -16,17 +16,17 @@ use BrianFaust\Http\HttpResponse;
 
 class Groups extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/firewall/waf/packages/{$packageIdentifier}/groups", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/firewall/waf/packages/{$packageIdentifier}/groups/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/firewall/waf/packages/{$packageIdentifier}/groups/{$identifier}", $parameters);
     }

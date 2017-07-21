@@ -16,7 +16,7 @@ use BrianFaust\Http\HttpResponse;
 
 class Analyze extends AbstractAPI
 {
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$identifier}/ssl/analyze", $parameters);
     }

@@ -16,32 +16,32 @@ use BrianFaust\Http\HttpResponse;
 
 class CustomSsl extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/custom_certificates", $parameters);
     }
 
-    public function create(array $parameters): HttpResponse
+    public function create(array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/custom_certificates", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/custom_certificates/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters): HttpResponse
+    public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/custom_certificates/{$identifier}", $parameters);
     }
 
-    public function prioritize(array $parameters): HttpResponse
+    public function prioritize(array $parameters = []): HttpResponse
     {
         return $this->client->put("zones/{$zoneIdentifier}/custom_certificates/prioritize", $parameters);
     }
 
-    public function delete(array $parameters): HttpResponse
+    public function delete(array $parameters = []): HttpResponse
     {
         return $this->client->delete("zones/{$zoneIdentifier}/custom_certificates/{$identifier}", $parameters);
     }

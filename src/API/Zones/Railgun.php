@@ -16,22 +16,22 @@ use BrianFaust\Http\HttpResponse;
 
 class Railgun extends AbstractAPI
 {
-    public function list(array $parameters): HttpResponse
+    public function list(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/railguns", $parameters);
     }
 
-    public function details(array $parameters): HttpResponse
+    public function details(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/railguns/{$identifier}", $parameters);
     }
 
-    public function diagnose(array $parameters): HttpResponse
+    public function diagnose(array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/railguns/{$identifier}/diagnose", $parameters);
     }
 
-    public function toggle(array $parameters): HttpResponse
+    public function toggle(array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/railguns/{$identifier}", $parameters);
     }
