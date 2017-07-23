@@ -11,8 +11,8 @@
 
 namespace BrianFaust\CloudFlare\API\Zones\Firewall\WafRules;
 
-use BrianFaust\CloudFlare\API\AbstractAPI;
 use BrianFaust\Http\HttpResponse;
+use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Groups extends AbstractAPI
 {
