@@ -11,8 +11,8 @@
 
 namespace BrianFaust\CloudFlare\API\Users;
 
-use BrianFaust\CloudFlare\API\AbstractAPI;
 use BrianFaust\Http\HttpResponse;
+use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class VirtualDns extends AbstractAPI
 {

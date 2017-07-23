@@ -11,8 +11,8 @@
 
 namespace BrianFaust\CloudFlare\API\Zones\Ssl;
 
-use BrianFaust\CloudFlare\API\AbstractAPI;
 use BrianFaust\Http\HttpResponse;
+use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Verification extends AbstractAPI
 {

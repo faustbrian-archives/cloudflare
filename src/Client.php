@@ -39,8 +39,8 @@ class Client
      */
     public function __construct(string $key, string $email, ?string $userServiceKey = null)
     {
-        $this->key            = $key;
-        $this->email          = $email;
+        $this->key = $key;
+        $this->email = $email;
         $this->userServiceKey = $userServiceKey;
     }
 
