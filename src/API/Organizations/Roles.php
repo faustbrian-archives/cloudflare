@@ -16,13 +16,13 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Roles extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $organizationIdentifier): HttpResponse
     {
-        return $this->client->get("organizations/{$organizationIdentifier}/roles", $parameters);
+        return $this->client->get("organizations/{$organizationIdentifier}/roles");
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $organizationIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->patch("organizations/{$organizationIdentifier}/roles/{$identifier}", $parameters);
+        return $this->client->patch("organizations/{$organizationIdentifier}/roles/{$identifier}");
     }
 }

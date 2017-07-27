@@ -16,9 +16,9 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class VirtualDns extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(): HttpResponse
     {
-        return $this->client->get('user/virtual_dns', $parameters);
+        return $this->client->get('user/virtual_dns');
     }
 
     public function create(array $parameters = []): HttpResponse
@@ -26,17 +26,17 @@ class VirtualDns extends AbstractAPI
         return $this->client->post('user/virtual_dns', $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $identifier): HttpResponse
     {
-        return $this->client->get("user/virtual_dns/{$identifier}", $parameters);
+        return $this->client->get("user/virtual_dns/{$identifier}");
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $identifier): HttpResponse
     {
-        return $this->client->delete("user/virtual_dns/{$identifier}", $parameters);
+        return $this->client->delete("user/virtual_dns/{$identifier}");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("user/virtual_dns/{$identifier}", $parameters);
     }

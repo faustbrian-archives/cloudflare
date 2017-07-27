@@ -16,17 +16,17 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Invites extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(): HttpResponse
     {
-        return $this->client->get('user/invites', $parameters);
+        return $this->client->get('user/invites');
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $identifier): HttpResponse
     {
-        return $this->client->get("user/invites/{$identifier}", $parameters);
+        return $this->client->get("user/invites/{$identifier}");
     }
 
-    public function respond(array $parameters = []): HttpResponse
+    public function respond(string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("user/invites/{$identifier}", $parameters);
     }

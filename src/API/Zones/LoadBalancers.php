@@ -15,28 +15,28 @@ use BrianFaust\Http\HttpResponse;
 
 class LoadBalancers extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$identifier}/load_balancers", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/load_balancers");
     }
 
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
-        return $this->client->post("zones/{$identifier}/load_balancers", $parameters);
+        return $this->client->post("zones/{$zoneIdentifier}/load_balancers", $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->get("zones/{$identifier}/load_balancers/{$identifier}", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/load_balancers/{$identifier}");
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->delete("zones/{$identifier}/load_balancers/{$identifier}", $parameters);
+        return $this->client->delete("zones/{$zoneIdentifier}/load_balancers/{$identifier}");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $zoneIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
-        return $this->client->patch("zones/{$identifier}/load_balancers/{$identifier}", $parameters);
+        return $this->client->patch("zones/{$zoneIdentifier}/load_balancers/{$identifier}", $parameters);
     }
 }

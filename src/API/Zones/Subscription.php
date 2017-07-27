@@ -16,18 +16,18 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Subscription extends AbstractAPI
 {
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$identifier}/subscription", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/subscription");
     }
 
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
-        return $this->client->post("zones/{$identifier}/subscription", $parameters);
+        return $this->client->post("zones/{$zoneIdentifier}/subscription", $parameters);
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
-        return $this->client->patch("zones/{$identifier}/subscription", $parameters);
+        return $this->client->patch("zones/{$zoneIdentifier}/subscription", $parameters);
     }
 }

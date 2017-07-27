@@ -25,12 +25,12 @@ class Certificates extends AbstractAPI
         return $this->client->post('certificates', $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $identifier): HttpResponse
     {
-        return $this->client->get("certificates/{$identifier}", $parameters);
+        return $this->client->get("certificates/{$identifier}");
     }
 
-    public function revoke(array $parameters = []): HttpResponse
+    public function revoke(string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->delete("certificates/{$identifier}", $parameters);
     }

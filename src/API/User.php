@@ -15,23 +15,13 @@ use BrianFaust\Http\HttpResponse;
 
 class User extends AbstractAPI
 {
-    public function details(array $parameters = []): HttpResponse
+    public function details(): HttpResponse
     {
-        return $this->client->get('user', $parameters);
+        return $this->client->get('user');
     }
 
     public function update(array $parameters = []): HttpResponse
     {
         return $this->client->patch('user', $parameters);
-    }
-
-    public function billingProfile(array $parameters = []): HttpResponse
-    {
-        return $this->client->get('user/billing/profile', $parameters);
-    }
-
-    public function billingHistory(array $parameters = []): HttpResponse
-    {
-        return $this->client->get('user/billing/history', $parameters);
     }
 }

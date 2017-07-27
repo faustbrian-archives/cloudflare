@@ -16,12 +16,12 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class DnsAnalytics extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $organizationIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("organizations/{$organizationIdentifier}/virtual_dns/{$identifier}/dns_analytics/report", $parameters);
     }
 
-    public function listByTime(array $parameters = []): HttpResponse
+    public function listByTime(string $organizationIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("organizations/{$organizationIdentifier}/virtual_dns/{$identifier}/dns_analytics/report/bytime", $parameters);
     }

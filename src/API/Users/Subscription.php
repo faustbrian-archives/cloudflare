@@ -16,17 +16,17 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Subscription extends AbstractAPI
 {
-    public function details(array $parameters = []): HttpResponse
+    public function details(): HttpResponse
     {
-        return $this->client->get('user/subscriptions', $parameters);
+        return $this->client->get('user/subscriptions');
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("user/subscriptions/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $identifeir): HttpResponse
     {
         return $this->client->delete("user/subscriptions/{$identifier}", $parameters);
     }

@@ -16,23 +16,23 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Members extends AbstractAPI
 {
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $organizationIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("organizations/{$organizationIdentifier}/members", $parameters);
     }
 
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $organizationIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$organizationIdentifier}/members", $parameters);
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $organizationIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("organizations/{$organizationIdentifier}/members/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $organizationIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->delete("organizations/{$organizationIdentifier}/members/{$identifier}", $parameters);
+        return $this->client->delete("organizations/{$organizationIdentifier}/members/{$identifier}");
     }
 }

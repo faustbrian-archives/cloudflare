@@ -16,28 +16,28 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class RateLimits extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/rate_limits", $parameters);
     }
 
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/rate_limits", $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/rate_limits/{$identifier}", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/rate_limits/{$identifier}");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $zoneIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/rate_limits/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->delete("zones/{$zoneIdentifier}/rate_limits/{$identifier}", $parameters);
+        return $this->client->delete("zones/{$zoneIdentifier}/rate_limits/{$identifier}");
     }
 }

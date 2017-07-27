@@ -16,27 +16,27 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Pools extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $organizationIdentifier): HttpResponse
     {
-        return $this->client->get("organizations/{$organizationIdentifier}/load_balancers/pools", $parameters);
+        return $this->client->get("organizations/{$organizationIdentifier}/load_balancers/pools");
     }
 
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $organizationIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("organizations/{$organizationIdentifier}/load_balancers/pools", $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $organizationIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->get("organizations/{$organizationIdentifier}/load_balancers/pools/{$identifier}", $parameters);
+        return $this->client->get("organizations/{$organizationIdentifier}/load_balancers/pools/{$identifier}");
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $organizationIdentifier, string $identifier): HttpResponse
     {
         return $this->client->delete("organizations/{$organizationIdentifier}/load_balancers/pools/{$identifier}", $parameters);
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $organizationIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$organizationIdentifier}/load_balancers/pools/{$identifier}", $parameters);
     }

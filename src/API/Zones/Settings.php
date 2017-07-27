@@ -16,367 +16,367 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Settings extends AbstractAPI
 {
-    public function getAllZone(array $parameters = []): HttpResponse
+    public function getAllZone(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings");
     }
 
-    public function getAdvancedDDOS(array $parameters = []): HttpResponse
+    public function getAdvancedDDOS(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/advanced_ddos", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/advanced_ddos");
     }
 
-    public function getAlwaysOnline(array $parameters = []): HttpResponse
+    public function getAlwaysOnline(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/always_online", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/always_online");
     }
 
-    public function getAlwaysUseHTTPS(array $parameters = []): HttpResponse
+    public function getAlwaysUseHTTPS(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/always_use_https", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/always_use_https");
     }
 
-    public function getAutomaticHTTPSRewrites(array $parameters = []): HttpResponse
+    public function getAutomaticHTTPSRewrites(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/automatic_https_rewrites", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/automatic_https_rewrites");
     }
 
-    public function getBrowserCacheTTL(array $parameters = []): HttpResponse
+    public function getBrowserCacheTTL(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/browser_cache_ttl", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/browser_cache_ttl");
     }
 
-    public function getBrowserCheck(array $parameters = []): HttpResponse
+    public function getBrowserCheck(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/browser_check", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/browser_check");
     }
 
-    public function getCacheLevel(array $parameters = []): HttpResponse
+    public function getCacheLevel(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/cache_level", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/cache_level");
     }
 
-    public function getChallengeTTL(array $parameters = []): HttpResponse
+    public function getChallengeTTL(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/challenge_ttl", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/challenge_ttl");
     }
 
-    public function getDevelopmentMode(array $parameters = []): HttpResponse
+    public function getDevelopmentMode(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/development_mode", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/development_mode");
     }
 
-    public function getEmailObfuscation(array $parameters = []): HttpResponse
+    public function getEmailObfuscation(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/email_obfuscation", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/email_obfuscation");
     }
 
-    public function getHotlinkProtection(array $parameters = []): HttpResponse
+    public function getHotlinkProtection(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/hotlink_protection", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/hotlink_protection");
     }
 
-    public function getIPGeolocation(array $parameters = []): HttpResponse
+    public function getIPGeolocation(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/ip_geolocation", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/ip_geolocation");
     }
 
-    public function getIPv6(array $parameters = []): HttpResponse
+    public function getIPv6(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/ipv6", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/ipv6");
     }
 
-    public function getMinify(array $parameters = []): HttpResponse
+    public function getMinify(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/minify", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/minify");
     }
 
-    public function getMobileRedirect(array $parameters = []): HttpResponse
+    public function getMobileRedirect(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/mobile_redirect", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/mobile_redirect");
     }
 
-    public function getMirage(array $parameters = []): HttpResponse
+    public function getMirage(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/mirage", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/mirage");
     }
 
-    public function getEnableErrorPagesOn(array $parameters = []): HttpResponse
+    public function getEnableErrorPagesOn(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/origin_error_page_pass_thru", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/origin_error_page_pass_thru");
     }
 
-    public function getOpportunisticEncryption(array $parameters = []): HttpResponse
+    public function getOpportunisticEncryption(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/opportunistic_encryption", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/opportunistic_encryption");
     }
 
-    public function getPolish(array $parameters = []): HttpResponse
+    public function getPolish(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/polish", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/polish");
     }
 
-    public function getWebP(array $parameters = []): HttpResponse
+    public function getWebP(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/webp", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/webp");
     }
 
-    public function getPrefetchPreload(array $parameters = []): HttpResponse
+    public function getPrefetchPreload(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/prefetch_preload", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/prefetch_preload");
     }
 
-    public function getResponseBuffering(array $parameters = []): HttpResponse
+    public function getResponseBuffering(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/response_buffering", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/response_buffering");
     }
 
-    public function getRocketLoader(array $parameters = []): HttpResponse
+    public function getRocketLoader(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/rocket_loader", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/rocket_loader");
     }
 
-    public function getSecurityHeaderHSTS(array $parameters = []): HttpResponse
+    public function getSecurityHeaderHSTS(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/security_header", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/security_header");
     }
 
-    public function getSecurityLevel(array $parameters = []): HttpResponse
+    public function getSecurityLevel(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/security_level", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/security_level");
     }
 
-    public function getServerSideExclude(array $parameters = []): HttpResponse
+    public function getServerSideExclude(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/server_side_exclude", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/server_side_exclude");
     }
 
-    public function getEnableQueryStringSort(array $parameters = []): HttpResponse
+    public function getEnableQueryStringSort(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/sort_query_string_for_cache", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/sort_query_string_for_cache");
     }
 
-    public function getSsl(array $parameters = []): HttpResponse
+    public function getSsl(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/ssl", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/ssl");
     }
 
-    public function getZoneEnableTLS12(array $parameters = []): HttpResponse
+    public function getZoneEnableTLS12(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/tls_1_2_only", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/tls_1_2_only");
     }
 
-    public function getZoneEnableTLS13(array $parameters = []): HttpResponse
+    public function getZoneEnableTLS13(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/tls_1_3", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/tls_1_3");
     }
 
-    public function getTLSClientAuth(array $parameters = []): HttpResponse
+    public function getTLSClientAuth(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/tls_client_auth", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/tls_client_auth");
     }
 
-    public function getTrueClientIP(array $parameters = []): HttpResponse
+    public function getTrueClientIP(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/true_client_ip_header", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/true_client_ip_header");
     }
 
-    public function getWebApplicationFirewallWAF(array $parameters = []): HttpResponse
+    public function getWebApplicationFirewallWAF(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/waf", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/waf");
     }
 
-    public function getHttp2(array $parameters = []): HttpResponse
+    public function getHttp2(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/http2", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/http2");
     }
 
-    public function getPseudoIpv4(array $parameters = []): HttpResponse
+    public function getPseudoIpv4(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/pseudo_ipv4", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/pseudo_ipv4");
     }
 
-    public function getWebSockets(array $parameters = []): HttpResponse
+    public function getWebSockets(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/settings/websockets", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/settings/websockets");
     }
 
-    public function changeSettingsInfo(array $parameters = []): HttpResponse
+    public function changeSettingsInfo(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings", $parameters);
     }
 
-    public function changeAlwaysOnline(array $parameters = []): HttpResponse
+    public function changeAlwaysOnline(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/always_online", $parameters);
     }
 
-    public function changeAlwaysUseHTTPS(array $parameters = []): HttpResponse
+    public function changeAlwaysUseHTTPS(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/always_use_https", $parameters);
     }
 
-    public function changeAutomaticHTTPSRewrites(array $parameters = []): HttpResponse
+    public function changeAutomaticHTTPSRewrites(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/automatic_https_rewrites", $parameters);
     }
 
-    public function changeBrowserCacheTTL(array $parameters = []): HttpResponse
+    public function changeBrowserCacheTTL(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/browser_cache_ttl", $parameters);
     }
 
-    public function changeBrowserCheck(array $parameters = []): HttpResponse
+    public function changeBrowserCheck(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/browser_check", $parameters);
     }
 
-    public function changeCacheLevel(array $parameters = []): HttpResponse
+    public function changeCacheLevel(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/cache_level", $parameters);
     }
 
-    public function changeChallengeTTL(array $parameters = []): HttpResponse
+    public function changeChallengeTTL(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/challenge_ttl", $parameters);
     }
 
-    public function changeDevelopmentMode(array $parameters = []): HttpResponse
+    public function changeDevelopmentMode(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/development_mode", $parameters);
     }
 
-    public function changeEmailObfuscation(array $parameters = []): HttpResponse
+    public function changeEmailObfuscation(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/email_obfuscation", $parameters);
     }
 
-    public function changeEnableErrorPagesOn(array $parameters = []): HttpResponse
+    public function changeEnableErrorPagesOn(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/origin_error_page_pass_thru", $parameters);
     }
 
-    public function changeEnableQueryStringSort(array $parameters = []): HttpResponse
+    public function changeEnableQueryStringSort(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/sort_query_string_for_cache", $parameters);
     }
 
-    public function changeHotlinkProtection(array $parameters = []): HttpResponse
+    public function changeHotlinkProtection(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/hotlink_protection", $parameters);
     }
 
-    public function changeIPGeolocation(array $parameters = []): HttpResponse
+    public function changeIPGeolocation(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/ip_geolocation", $parameters);
     }
 
-    public function changeIPv6(array $parameters = []): HttpResponse
+    public function changeIPv6(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/ipv6", $parameters);
     }
 
-    public function changeMinify(array $parameters = []): HttpResponse
+    public function changeMinify(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/minify", $parameters);
     }
 
-    public function changeMobileRedirect(array $parameters = []): HttpResponse
+    public function changeMobileRedirect(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/mobile_redirect", $parameters);
     }
 
-    public function changeMirage(array $parameters = []): HttpResponse
+    public function changeMirage(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/mirage", $parameters);
     }
 
-    public function changeOpportunisticEncryption(array $parameters = []): HttpResponse
+    public function changeOpportunisticEncryption(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/opportunistic_encryption", $parameters);
     }
 
-    public function changePolish(array $parameters = []): HttpResponse
+    public function changePolish(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/polish", $parameters);
     }
 
-    public function changeWebP(array $parameters = []): HttpResponse
+    public function changeWebP(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/web", $parameters);
     }
 
-    public function changePrefetchPreload(array $parameters = []): HttpResponse
+    public function changePrefetchPreload(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/prefetch_preload", $parameters);
     }
 
-    public function changeResponseBuffering(array $parameters = []): HttpResponse
+    public function changeResponseBuffering(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/response_buffering", $parameters);
     }
 
-    public function changeRocketLoader(array $parameters = []): HttpResponse
+    public function changeRocketLoader(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/rocket_loader", $parameters);
     }
 
-    public function changeSecurityHeaderHSTS(array $parameters = []): HttpResponse
+    public function changeSecurityHeaderHSTS(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/security_header", $parameters);
     }
 
-    public function changeSecurityLevel(array $parameters = []): HttpResponse
+    public function changeSecurityLevel(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/security_level", $parameters);
     }
 
-    public function changeServerSideExclude(array $parameters = []): HttpResponse
+    public function changeServerSideExclude(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/server_side_exclude", $parameters);
     }
 
-    public function changeSsl(array $parameters = []): HttpResponse
+    public function changeSsl(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/ssl", $parameters);
     }
 
-    public function changeTLSClientAuth(array $parameters = []): HttpResponse
+    public function changeTLSClientAuth(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/tls_client_auth", $parameters);
     }
 
-    public function changeTrueClientIP(array $parameters = []): HttpResponse
+    public function changeTrueClientIP(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/true_client_ip_header", $parameters);
     }
 
-    public function changeTls12(array $parameters = []): HttpResponse
+    public function changeTls12(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/tls_1_2_only", $parameters);
     }
 
-    public function changeTls13(array $parameters = []): HttpResponse
+    public function changeTls13(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/tls_1_3", $parameters);
     }
 
-    public function changeWebApplicationFirewallWAF(array $parameters = []): HttpResponse
+    public function changeWebApplicationFirewallWAF(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/waf", $parameters);
     }
 
-    public function changeHttp2(array $parameters = []): HttpResponse
+    public function changeHttp2(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/http2", $parameters);
     }
 
-    public function changePseudoIpv4(array $parameters = []): HttpResponse
+    public function changePseudoIpv4(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/pseudo_ipv4", $parameters);
     }
 
-    public function changeWebSockets(array $parameters = []): HttpResponse
+    public function changeWebSockets(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/settings/websockets", $parameters);
     }

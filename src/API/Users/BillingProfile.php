@@ -9,15 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\CloudFlare\API\Zones\Ssl;
+namespace BrianFaust\CloudFlare\API\Users;
 
 use BrianFaust\Http\HttpResponse;
-use BrianFaust\CloudFlare\API\AbstractAPI;
 
-class Verification extends AbstractAPI
+class User extends AbstractAPI
 {
-    public function details(string $zoneIdentifier): HttpResponse
+    public function details(): HttpResponse
     {
-        return $this->client->post("zones/{$zoneIdentifier}/ssl/verification");
+        return $this->client->get('user/billing/profile');
     }
 }

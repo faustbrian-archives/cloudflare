@@ -31,8 +31,8 @@ class AccessRules extends AbstractAPI
         return $this->client->patch("user/firewall/access_rules/rules/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(): HttpResponse
     {
-        return $this->client->delete("user/firewall/access_rules/rules/{$identifier}", $parameters);
+        return $this->client->delete("user/firewall/access_rules/rules/{$identifier}");
     }
 }

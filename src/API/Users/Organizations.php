@@ -21,13 +21,13 @@ class Organizations extends AbstractAPI
         return $this->client->get('user/organizations', $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $identifier): HttpResponse
     {
-        return $this->client->get("user/organizations/{$identifier}", $parameters);
+        return $this->client->get("user/organizations/{$identifier}");
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $identifier): HttpResponse
     {
-        return $this->client->delete("user/organizations/{$identifier}", $parameters);
+        return $this->client->delete("user/organizations/{$identifier}");
     }
 }

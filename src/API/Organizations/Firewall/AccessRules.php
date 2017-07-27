@@ -16,23 +16,23 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class AccessRules extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $organizationIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("organizations/{$organizationIdentifier}/firewall/access_rules/rules", $parameters);
     }
 
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $organizationIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("organizations/{$organizationIdentifier}/firewall/access_rules/rules", $parameters);
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $organizationIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("organizations/{$organizationIdentifier}/firewall/access_rules/rules/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $organizationIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->delete("organizations/{$organizationIdentifier}/firewall/access_rules/rules/{$identifier}", $parameters);
+        return $this->client->delete("organizations/{$organizationIdentifier}/firewall/access_rules/rules/{$identifier}");
     }
 }

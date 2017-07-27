@@ -20,4 +20,9 @@ class RatePlan extends AbstractAPI
     {
         return $this->client->post('zones', $parameters);
     }
+
+    public function availableRatePlans(string $zoneIdentifier, array $parameters = []): HttpResponse
+    {
+        return $this->client->get("zones/{$zoneIdentifier}/available_rate_plans", $parameters);
+    }
 }

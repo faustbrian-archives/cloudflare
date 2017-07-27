@@ -25,23 +25,28 @@ class Railguns extends AbstractAPI
         return $this->client->get('railguns', $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $identifier): HttpResponse
     {
-        return $this->client->get("railguns/{$identifier}", $parameters);
+        return $this->client->get("railguns/{$identifier}");
     }
 
-    public function zones(array $parameters = []): HttpResponse
+    public function zones(string $identifier): HttpResponse
     {
-        return $this->client->get("railguns/{$identifier}/zones", $parameters);
+        return $this->client->get("railguns/{$identifier}/zones");
     }
 
-    public function toggle(array $parameters = []): HttpResponse
+    public function enabled(string $identifier): HttpResponse
     {
-        return $this->client->patch("railguns/{$identifier}", $parameters);
+        return $this->client->patch("railguns/{$identifier}", ['enabled' => true]);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function disable(string $identifier): HttpResponse
     {
-        return $this->client->delete("railguns/{$identifier}", $parameters);
+        return $this->client->patch("railguns/{$identifier}", ['enabled' => false]);
+    }
+
+    public function delete(string $identifier): HttpResponse
+    {
+        return $this->client->delete("railguns/{$identifier}");
     }
 }

@@ -16,12 +16,12 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Aml extends AbstractAPI
 {
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/amp/viewer", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/amp/viewer");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/amp/viewer", $parameters);
     }

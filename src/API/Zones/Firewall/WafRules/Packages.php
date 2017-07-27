@@ -16,17 +16,17 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Packages extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/firewall/waf/packages", $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/firewall/waf/packages/{$identifier}", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/firewall/waf/packages/{$identifier}");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $zoneIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/firewall/waf/packages/{$identifier}", $parameters);
     }

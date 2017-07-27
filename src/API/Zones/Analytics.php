@@ -16,12 +16,12 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Analytics extends AbstractAPI
 {
-    public function dashboard(array $parameters = []): HttpResponse
+    public function dashboard(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/analytics/dashboard", $parameters);
     }
 
-    public function colos(array $parameters = []): HttpResponse
+    public function colos(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/analytics/colos", $parameters);
     }

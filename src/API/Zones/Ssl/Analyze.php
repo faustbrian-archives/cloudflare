@@ -16,8 +16,8 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Analyze extends AbstractAPI
 {
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier): HttpResponse
     {
-        return $this->client->post("zones/{$identifier}/ssl/analyze", $parameters);
+        return $this->client->post("zones/{$zoneIdentifier}/ssl/analyze");
     }
 }

@@ -16,9 +16,9 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class Pools extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(): HttpResponse
     {
-        return $this->client->get('user/load_balancers/pools', $parameters);
+        return $this->client->get('user/load_balancers/pools');
     }
 
     public function create(array $parameters = []): HttpResponse
@@ -26,17 +26,17 @@ class Pools extends AbstractAPI
         return $this->client->post('user/load_balancers/pools', $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $identifier): HttpResponse
     {
-        return $this->client->get("user/load_balancers/pools/{$identifier}", $parameters);
+        return $this->client->get("user/load_balancers/pools/{$identifier}");
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $identifier): HttpResponse
     {
-        return $this->client->delete("user/load_balancers/pools/{$identifier}", $parameters);
+        return $this->client->delete("user/load_balancers/pools/{$identifier}");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("user/load_balancers/pools/{$identifier}", $parameters);
     }

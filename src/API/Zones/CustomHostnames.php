@@ -16,28 +16,28 @@ use BrianFaust\CloudFlare\API\AbstractAPI;
 
 class CustomHostnames extends AbstractAPI
 {
-    public function list(array $parameters = []): HttpResponse
+    public function list(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->get("zones/{$zoneIdentifier}/custom_hostnames", $parameters);
     }
 
-    public function create(array $parameters = []): HttpResponse
+    public function create(string $zoneIdentifier, array $parameters = []): HttpResponse
     {
         return $this->client->post("zones/{$zoneIdentifier}/custom_hostnames", $parameters);
     }
 
-    public function details(array $parameters = []): HttpResponse
+    public function details(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->get("zones/{$zoneIdentifier}/custom_hostnames/{$identifier}", $parameters);
+        return $this->client->get("zones/{$zoneIdentifier}/custom_hostnames/{$identifier}");
     }
 
-    public function update(array $parameters = []): HttpResponse
+    public function update(string $zoneIdentifier, string $identifier, array $parameters = []): HttpResponse
     {
         return $this->client->patch("zones/{$zoneIdentifier}/custom_hostnames/{$identifier}", $parameters);
     }
 
-    public function delete(array $parameters = []): HttpResponse
+    public function delete(string $zoneIdentifier, string $identifier): HttpResponse
     {
-        return $this->client->delete("zones/{$zoneIdentifier}/custom_hostnames/{$identifier}", $parameters);
+        return $this->client->delete("zones/{$zoneIdentifier}/custom_hostnames/{$identifier}");
     }
 }
