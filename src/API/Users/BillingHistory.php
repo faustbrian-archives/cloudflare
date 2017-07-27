@@ -13,7 +13,7 @@ namespace BrianFaust\CloudFlare\API\Users;
 
 use BrianFaust\Http\HttpResponse;
 
-class User extends AbstractAPI
+class BillingHistory extends AbstractAPI
 {
     public function details(): HttpResponse
     {
