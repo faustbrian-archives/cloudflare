@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\CloudFlare\API\Zones\Firewall;
 
-use BrianFaust\Http\HttpResponse;
 use BrianFaust\CloudFlare\API\AbstractAPI;
+use BrianFaust\Http\HttpResponse;
 
 class WafRules extends AbstractAPI
 {

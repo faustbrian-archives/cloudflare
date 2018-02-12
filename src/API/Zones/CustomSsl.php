@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\CloudFlare\API\Zones;
 
-use BrianFaust\Http\HttpResponse;
 use BrianFaust\CloudFlare\API\AbstractAPI;
+use BrianFaust\Http\HttpResponse;
 
 class CustomSsl extends AbstractAPI
 {
